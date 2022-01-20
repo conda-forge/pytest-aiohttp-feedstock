@@ -1,5 +1,5 @@
 {% set name = "pytest-aiohttp" %}
-{% set version = "0.3.0" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c929854339637977375838703b62fef63528598bc0a9d451639eba95f4aaa44f
+  sha256: 8744295776292cb6683490be2c3fc59d9d9d5ec2df7298a29ed59bef6adcdd7a
 
 build:
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
   noarch: python
 
 requirements:
@@ -32,7 +32,7 @@ about:
   license: Apache-2.0
   license_family: Apache
   license_file: LICENSE
-  summary: 'pytest plugin for aiohttp support'
+  summary: pytest plugin for aiohttp support
 
   dev_url: https://github.com/aio-libs/pytest-aiohttp
 
