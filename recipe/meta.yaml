@@ -1,5 +1,5 @@
 {% set name = "pytest-aiohttp" %}
-{% set version = "1.0.4" %}
+{% set version = "1.0.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 39ff3a0d15484c01d1436cbedad575c6eafbf0f57cdf76fb94994c97b5b8c5a4
+  sha256: 880262bc5951e934463b15e3af8bb298f11f7d4d3ebac970aab425aff10a780a
 
 build:
   number: 0
