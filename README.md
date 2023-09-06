@@ -11,6 +11,8 @@ Summary: pytest plugin for aiohttp support
 
 Development: https://github.com/aio-libs/pytest-aiohttp
 
+Documentation: https://docs.aiohttp.org/en/stable/testing.html
+
 Current build status
 ====================
 
