@@ -1,16 +1,16 @@
 {% set name = "pytest-aiohttp" %}
-{% set version = "1.0.5" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 880262bc5951e934463b15e3af8bb298f11f7d4d3ebac970aab425aff10a780a
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 147de8cb164f3fc9d7196967f109ab3c0b93ea3463ab50631e56438eab7b5adc
 
 build:
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
@@ -18,7 +18,8 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
+    - setuptools >=51.0
+    - setuptools_scm >=6.2
   run:
     - python >={{ python_min }}
     - pytest >=6.1.0
